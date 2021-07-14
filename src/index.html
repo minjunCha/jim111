@@ -11,14 +11,42 @@
   </style>
   <body>
     <input type="="text">
-    <button type=""button" class="add-button">추가</button>
-    <ui>
+    <button type=""button" class="add-button">추가하기</button>
+    <ul>
+        <li>안녕하세요
+            <p>안녕하세요</p>
+            <button type=""button" >완료</button>
 
-    </ui>
+
+        </li>
+
+    </ul>
     <script src="./index.js"></script>
     <script>
         const button = document.querySelector(".add-button");
-        console.dir(button);
+
+        button.addEventListener("click", function(){
+            const input = document.querySelector("input");
+
+            const li = document.createElement("li");
+            const p = document.createElement("p");
+            const button = document.createElement("button");
+
+            p.textContent = input.value;
+            button.textContent = '완료';
+
+            li.appendChild(p);
+            li.appendChild(button);
+
+            const ul = document.querySelector("ul");
+            ul.appendChild(li);
+
+            console.log(li);
+        })
+        
+
+
+        
     </script>
     </ui>
   
