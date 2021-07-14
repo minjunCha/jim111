@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .add-button {
+    }
+  </style>
+
+  <body>
+    <input type="text" class />
+    <button type="butto" class="add-button">추가하기</button>
+    <ul>
+      <li></li>
+    </ul>
+    <script>
+      const button = document.querySelector(".add-button");
+
+      button.addEventListener("click", function () {
+        const input = document.querySelector("input");
+
+        const li = document.createElement("li");
+        const p = document.createElement("p");
+        const button = document.createElement("button");
+
+        p.innerText = input.value;
+        button.innerText = "민준";
+        li.appendChild(p);
+        li.appendChild(button);
+
+        const ul = document.querySelector("ul");
+        ul.appendChild(li);
+
+        console.dir(li);
+      });
+    </script>
+  </body>
+</html>
