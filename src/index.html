@@ -7,17 +7,19 @@
     <title>Document</title>
   </head>
   <style>
+      .done {
+          color : gray;
+          text-decoration: line-through; 
+    }
 
   </style>
   <body>
-    <input type="="text">
-    <button type=""button" class="add-button">추가하기</button>
+    <input type="text">
+    <button type="button" class="add-button">추가하기</button>
     <ul>
         <li>안녕하세요
             <p>안녕하세요</p>
             <button type=""button" >완료</button>
-
-
         </li>
 
     </ul>
@@ -41,14 +43,12 @@
             const ul = document.querySelector("ul");
             ul.appendChild(li);
 
+            p.addEventListener("click", function(){
+                p.classList.toggle('done');
+            });
+
             console.log(li);
-        })
-        
-
-
-        
+        });
     </script>
-    </ui>
-  
-</body>
+  </body>
 </html>
