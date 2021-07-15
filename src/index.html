@@ -17,8 +17,8 @@
     <input type="text">
     <button type="button" class="add-button">추가하기</button>
     <ul>
-        <li>안녕하세요
-            <p>안녕하세요</p>
+        <li>
+            <p>오늘 할일</p>
             <button type=""button" >완료</button>
         </li>
 
@@ -46,6 +46,12 @@
             p.addEventListener("click", function(){
                 p.classList.toggle('done');
             });
+
+            button.addEventListener("click", function(event){
+              ul.removeChild(event.target.parentNode);
+              
+
+            })
 
             console.log(li);
         });
